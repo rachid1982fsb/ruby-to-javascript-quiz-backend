@@ -3,5 +3,5 @@ class Source < ApplicationRecord
     has_many :correct_responses
     
     validates :ruby_method, presence: true
-    validates :method_name, presence: true
+    validates :method_name, presence: true, uniqueness: true
 end

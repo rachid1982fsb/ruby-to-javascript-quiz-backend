@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_14_040707) do
+ActiveRecord::Schema.define(version: 2020_01_09_213208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_01_14_040707) do
   end
 
   create_table "sources", force: :cascade do |t|
+    t.string "name"
     t.string "ruby_method"
     t.string "method_name"
     t.string "method_discription"
@@ -33,10 +34,10 @@ ActiveRecord::Schema.define(version: 2020_01_14_040707) do
 
   create_table "test_cases", force: :cascade do |t|
     t.integer "source_id"
+    t.string "input"
+    t.string "output"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "input", array: true
-    t.text "output", array: true
   end
 
   create_table "user_algorithms", force: :cascade do |t|

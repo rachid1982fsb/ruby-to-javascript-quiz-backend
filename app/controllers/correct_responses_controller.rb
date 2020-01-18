@@ -1,7 +1,7 @@
 class CorrectResponsesController < ApplicationController
     def index
-        correct_responses = CorrectResponse.all
-        render :json => correct_responses
+        # correct_responses = CorrectResponse.all
+        render :json => CorrectResponse.all  
     end
 
     # def show

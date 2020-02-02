@@ -5,8 +5,13 @@ class UsersController < ApplicationController
         render :json => users
     end
 
+    def show_current_user
+        user = User.find(current_user.id)
+        render :json => user
+    end
     def show
-        render :json => User.find(params[:id])
+        user = User.find(params[:id])
+        render :json => user
     end
 
     def create

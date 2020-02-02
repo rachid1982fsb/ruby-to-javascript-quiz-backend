@@ -8,6 +8,11 @@ class CorrectResponsesController < ApplicationController
     #     render :json => CorrectResponse.find(params[:id])
     # end
 
+    # def user_responses
+       
+    #     render :json => CorrectResponse.where(user_id: params[:id])
+    # end
+
     def create
         correct_response = CorrectResponse.new(user_params)
         if correct_response.save

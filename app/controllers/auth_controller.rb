@@ -14,7 +14,7 @@ class AuthController < ApplicationController
     def show
       user = User.find_by(id: user_id)
       if logged_in?
-        render json: { id: user.id, username: user.username, email: user.email}
+        render json: {user: user}
       else
         render json: {error: 'No user could be found'}, status: 401
       end

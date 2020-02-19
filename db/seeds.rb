@@ -89,7 +89,7 @@ Source.create(name: "getMoneySpent", ruby_method: "https://memorycardgame.s3.ama
         TestCase.create(source_id: 5, input: "[3,1],[5,2,8],10", output: "9")
         TestCase.create(source_id: 5, input: "[4],[5],5", output: "-1")
         TestCase.create(source_id: 5, input: "[9,5,7,45,1],[2,22,18],50", output: "47")
-        TestCase.create(source_id: , input: "[19,15,227,245,111],[12,222,118],310", output: "257")
+        TestCase.create(source_id: 5, input: "[19,15,227,245,111],[12,222,118],310", output: "257")
 
     
     
